@@ -11,12 +11,20 @@
 
     {{ link }}
     <p v-html="link"></p>
+
+    <counter />
   </div>
+
 </template>
 
 <script>
+import Counter from "@/components/Counter";
+
 export default {
   name: 'app',
+  components: {
+    'counter': Counter,
+  },
   data() {
     return {
       title: "Some title",
