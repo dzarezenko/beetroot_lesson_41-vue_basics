@@ -1,11 +1,15 @@
 <template>
   <div>
     <h1>{{ counter }}</h1>
-    <button @click="increaseCounter">Increase counter</button>
+    <form action="http://google.com">
+      <input type="submit" @click.prevent="increaseCounter" value="Increase counter" />
+    </form>
   </div>
 </template>
 
 <script>
+// v-[directive]:[attribute].[modifier]
+
 export default {
   name: "Counter",
   data() {
@@ -14,7 +18,9 @@ export default {
     }
   },
   methods: {
-    increaseCounter() {
+    increaseCounter(event) {
+      console.log(event);
+
       this.counter++;
       console.log(`Button clicked! Counter is ${this.counter}`);
     },
