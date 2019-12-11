@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 v-once>{{ title }}</h1>
+    <!--h1 v-once>{{ title }}</h1>
     <p>
       {{ getTitle() }}
     </p>
@@ -10,7 +10,7 @@
     <br />
 
     {{ link }}
-    <p v-html="link"></p>
+    <p v-html="link"></p-->
 
     <counter />
   </div>
