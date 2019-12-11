@@ -5,6 +5,12 @@
       {{ getTitle() }}
     </p>
     <h1>{{ title }}</h1>
+
+    <a v-bind:href="url">Google</a><br />
+    <br />
+
+    {{ link }}
+    <p v-html="link"></p>
   </div>
 </template>
 
@@ -15,6 +21,7 @@ export default {
     return {
       title: "Some title",
       url: "https://google.com",
+      link: "<a href=\"https://google.com\">Google</a>",
     }
   },
   methods: {
