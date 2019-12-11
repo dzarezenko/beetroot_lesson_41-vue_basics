@@ -13,6 +13,8 @@
     <p v-html="link"></p-->
 
     <counter />
+
+    <counter />
   </div>
 
 </template>
