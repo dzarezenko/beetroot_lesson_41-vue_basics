@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div>
     <!--h1 v-once>{{ title }}</h1>
     <p>
       {{ getTitle() }}
@@ -20,7 +20,7 @@
 
     <!--twb /-->
 
-    <div>
+    <!--div>
       <h1 v-if="show">Some title</h1>
       <h1 v-show="show">Some title</h1>
 
@@ -47,7 +47,10 @@
 
       <SimpleHeader v-else title="Some other title 3" :color="color" />
 
-    </template>
+    </template-->
+
+    <list :data='["Item 1", "Item 2", "Item 3"]' />
+
   </div>
 
 </template>
@@ -57,6 +60,7 @@ import Counter from "@/components/Counter";
 import KeyboardEvents from "@/components/KeyboardEvents";
 import TwoWayBinding from "@/components/TwoWayBinding";
 import SimpleHeader from "@/components/SimpleHeader";
+import List from "@/components/List";
 
 export default {
   name: 'app',
@@ -65,6 +69,7 @@ export default {
     'kb-event': KeyboardEvents,
     'twb': TwoWayBinding,
     SimpleHeader,
+    'list': List,
   },
   data() {
     return {
