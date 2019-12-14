@@ -1,12 +1,13 @@
 <template>
-  <input type="text" @keyup.a_button="forceAlert" />
+  <input type="text" @keyup.ctrl.c="forceAlert" />
 </template>
 
 <script>
 export default {
   methods: {
-    forceAlert() {
-      alert("Button pressed");
+    forceAlert(event) {
+      console.log("Copied!");
+      //alert("Button pressed");
     }
   }
 }
