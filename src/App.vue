@@ -12,11 +12,13 @@
     {{ link }}
     <p v-html="link"></p-->
 
-    <counter />
+    <!--counter /-->
 
     <!--counter /-->
 
     <!--kb-event /-->
+
+    <twb />
   </div>
 
 </template>
@@ -24,12 +26,14 @@
 <script>
 import Counter from "@/components/Counter";
 import KeyboardEvents from "@/components/KeyboardEvents";
+import TwoWayBinding from "@/components/TwoWayBinding";
 
 export default {
   name: 'app',
   components: {
     'counter': Counter,
     'kb-event': KeyboardEvents,
+    'twb': TwoWayBinding,
   },
   data() {
     return {
