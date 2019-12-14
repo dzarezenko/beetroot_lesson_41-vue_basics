@@ -20,11 +20,34 @@
 
     <!--twb /-->
 
-    <SimpleHeader title="Some other title" :color="color" />
+    <div>
+      <h1 v-if="show">Some title</h1>
+      <h1 v-show="show">Some title</h1>
 
-    <SimpleHeader title="Some other title 2" :color="color" />
+      <button @click="show=!show">Click Me</button>
+    </div>
 
-    <SimpleHeader title="Some other title 3" :color="color" />
+    <template v-if="true">
+      <h1>Block 1</h1>
+
+      <SimpleHeader v-if="wichOne == 1" title="Some other title" :color="color" />
+
+      <SimpleHeader v-else-if="wichOne == 1 || wichOne == 2" title="Some other title 2" :color="color" />
+
+      <SimpleHeader v-else title="Some other title 3" :color="color" />
+
+    </template>
+
+    <template v-else>
+      <h1>Block 2</h1>
+
+      <SimpleHeader v-if="wichOne == 1" title="Some other title" :color="color" />
+
+      <SimpleHeader v-else-if="wichOne == 2" title="Some other title 2" :color="color" />
+
+      <SimpleHeader v-else title="Some other title 3" :color="color" />
+
+    </template>
   </div>
 
 </template>
@@ -50,6 +73,8 @@ export default {
       link: "<a href=\"https://google.com\">Google</a>",
 
       color: "green",
+      wichOne: 5,
+      show: true,
     }
   },
   methods: {
