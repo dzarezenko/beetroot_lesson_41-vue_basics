@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="container">
     <!--h1 v-once>{{ title }}</h1>
     <p>
       {{ getTitle() }}
@@ -93,3 +93,9 @@ export default {
   },
 }
 </script>
+
+<style>
+#container {
+  background-color: red;
+}
+</style>

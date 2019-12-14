@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="simple_header">
     <h1 :style="`color: ${color}`">{{ title }}</h1>
     <button @click="changeColor">Change color</button>
   </div>
@@ -29,3 +29,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+#simple_header {
+  background-color: green;
+}
+</style>
