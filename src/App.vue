@@ -12,11 +12,11 @@
     {{ link }}
     <p v-html="link"></p-->
 
-    <!--counter />
+    <counter />
 
-    <counter /-->
+    <!--counter /-->
 
-    <kb-event />
+    <!--kb-event /-->
   </div>
 
 </template>

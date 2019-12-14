@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>{{ counter }}</h1>
-    <button @click.once="increaseCounter(2, $event)">Increase counter</button>
+    <button @click="counter+= 2">Increase counter</button>
+    {{ counter + "" + counter }}
   </div>
 </template>
 
