@@ -18,7 +18,10 @@
 
     <!--kb-event /-->
 
-    <twb />
+    <!--twb /-->
+
+    <SimpleHeader title="Some other title" :color="color" />
+    <button @click="changeColor">Change color</button>
   </div>
 
 </template>
@@ -27,6 +30,7 @@
 import Counter from "@/components/Counter";
 import KeyboardEvents from "@/components/KeyboardEvents";
 import TwoWayBinding from "@/components/TwoWayBinding";
+import SimpleHeader from "@/components/SimpleHeader";
 
 export default {
   name: 'app',
@@ -34,12 +38,15 @@ export default {
     'counter': Counter,
     'kb-event': KeyboardEvents,
     'twb': TwoWayBinding,
+    SimpleHeader,
   },
   data() {
     return {
       title: "Some title",
       url: "https://google.com",
       link: "<a href=\"https://google.com\">Google</a>",
+
+      color: "green",
     }
   },
   methods: {
@@ -47,6 +54,13 @@ export default {
       this.title = "Some other title";
 
       return this.title;
+    },
+    changeColor() {
+      let r = Math.floor(Math.random() * 255).toString(16),
+          g = Math.floor(Math.random() * 255).toString(16),
+          b = Math.floor(Math.random() * 255).toString(16);
+
+      this.color = `#${r}${g}${b}`;
     },
   },
 }
