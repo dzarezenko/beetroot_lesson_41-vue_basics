@@ -21,7 +21,10 @@
     <!--twb /-->
 
     <SimpleHeader title="Some other title" :color="color" />
-    <button @click="changeColor">Change color</button>
+
+    <SimpleHeader title="Some other title 2" :color="color" />
+
+    <SimpleHeader title="Some other title 3" :color="color" />
   </div>
 
 </template>

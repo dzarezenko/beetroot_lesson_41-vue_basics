@@ -1,5 +1,8 @@
 <template>
-  <h1 :style="`color: ${color}`">{{ title }}</h1>
+  <div>
+    <h1 :style="`color: ${color}`">{{ title }}</h1>
+    <button @click="changeColor">Change color</button>
+  </div>
 </template>
 
 <script>
@@ -13,6 +16,15 @@ export default {
     color: {
       type: String,
       default: "#ff0000",
+    },
+  },
+  methods: {
+    changeColor() {
+      let r = Math.floor(Math.random() * 255).toString(16),
+          g = Math.floor(Math.random() * 255).toString(16),
+          b = Math.floor(Math.random() * 255).toString(16);
+
+      this.color = `#${r}${g}${b}`;
     },
   },
 }
